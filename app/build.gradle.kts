@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    jacoco
 }
 
 repositories {
@@ -33,4 +34,15 @@ java {
 application {
     // Define the main class for the application.
     mainClass = "fr.aude.nicolas.lotkavolterra.App"
+}
+tasks.test {
+    finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
 }
