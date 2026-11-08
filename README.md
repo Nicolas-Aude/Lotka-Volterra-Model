@@ -1,7 +1,7 @@
 ```mermaid
 classDiagram
     direction TB
-
+    namespace fr.aude.nicolas.lotkavolterra.model
     namespace behaviour {
         class Behaviour {
             <<abstract>>
@@ -68,6 +68,7 @@ classDiagram
             +justGiveBirth() void
             +escape(e : Entity) void
         }
+    }
     }
 
     %% Héritage
