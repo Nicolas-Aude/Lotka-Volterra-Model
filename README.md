@@ -79,7 +79,7 @@ classDiagram
     Entity <|-- Predator
 
     %% Associations
-    Entity "0..1" o-- "*" Behaviour : behaviour
+    Entity o-- Behaviour : behaviour
     EstrusBehaviour o-- Prey
     EstrusBehaviour o-- Predator
     HuntingBehaviour o-- Prey
@@ -88,5 +88,5 @@ classDiagram
     %% Dépendances
     EstrusBehaviour ..> Prey : creates
     EstrusBehaviour ..> Predator : creates
-    HuntingBehaviour ..> Entity : hunts
+    HuntingBehaviour ..> Entity : removes
 ```
