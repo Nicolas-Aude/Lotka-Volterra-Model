@@ -1,7 +1,7 @@
 ```mermaid
 classDiagram
     direction TB
-    namespace fr.aude.nicolas.lotkavolterra.model {
+    namespace model {
     namespace behaviour {
         class Behaviour {
             <<abstract>>
