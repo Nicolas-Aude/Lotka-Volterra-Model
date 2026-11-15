@@ -34,7 +34,7 @@ public class PopulationSimulationPrinter implements SimulationPrinter {
         String filename = "simulation.csv";
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
-            writer.write("Time,FirstPopulation,SecondPopulation");
+            writer.write("Time;FirstPopulation;SecondPopulation");
             writer.newLine();
             for (int i = 0; i < time.size(); i++) {
                 writer.write(
@@ -44,9 +44,9 @@ public class PopulationSimulationPrinter implements SimulationPrinter {
                 );
                 writer.newLine();
             }
-            System.out.println("Données exportées dans " + filename);
+            System.out.println("Data exported to " + filename);
         } catch (IOException e) {
-            System.err.println("Erreur lors de l'export CSV : " + e.getMessage());
+            System.err.println("Error during CSV export : " + e.getMessage());
         }
     }
 }
